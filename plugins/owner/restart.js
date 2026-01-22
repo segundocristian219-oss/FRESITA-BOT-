@@ -11,7 +11,7 @@ const handler = async (msg, { conn }) => {
 
   // Mensaje de aviso
   await conn.sendMessage(chatId, {
-    text: "🔄 *𝐅𝐎𝐗 𝐁𝐀𝐋𝐀 𝐁𝐎𝐓 se reiniciará en unos segundos...*"
+    text: "🔄 *𝐅𝐑𝐄𝐒𝐈𝐓𝐀 𝐁𝐎𝐓 se reiniciará en unos segundos...*"
   }, { quoted: msg });
 
   // Guardar chat para notificar luego
