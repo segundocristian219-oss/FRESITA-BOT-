@@ -1,6 +1,6 @@
 let handler = async (m, { conn, text, command }) => {
   let id = text ? text : m.chat
-  let mensaje = '𝖥𝗎𝖾 𝖴𝗇 𝖦𝗎𝗌𝗍𝗈 𝖤𝗌𝗍𝖺𝗋 𝖠𝗊𝗎𝗂, *𝐅𝐎𝐗 𝐁𝐀𝐋𝐀 𝐁𝐎𝐓* 𝖲𝖾 𝖣𝖾𝗌𝗉𝗂𝖽𝖾'
+  let mensaje = '𝖥𝗎𝖾 𝖴𝗇 𝖦𝗎𝗌𝗍𝗈 𝖤𝗌𝗍𝖺𝗋 𝖠𝗊𝗎𝗂, *𝐅𝐑𝐄𝐒𝐈𝐓𝐀 𝐁𝐎𝐓* 𝖲𝖾 𝖣𝖾𝗌𝗉𝗂𝖽𝖾'
 
   await conn.sendMessage(
     m.chat,
