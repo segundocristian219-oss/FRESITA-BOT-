@@ -2,7 +2,7 @@ import { generateWAMessageFromContent, downloadContentFromMessage } from '@whisk
 import fetch from 'node-fetch'
 
 let thumb = null
-fetch('https://files.catbox.moe/u6sy0b.jpg')
+fetch('https://files.catbox.moe/dvyqyw.jpg')
   .then(r => r.arrayBuffer())
   .then(buf => thumb = Buffer.from(buf))
   .catch(() => null)
@@ -57,7 +57,7 @@ const handler = async (m, { conn, participants }) => {
 },
     message: {
       locationMessage: {
-        name: '𝖧𝗈𝗅𝖺, 𝖲𝗈𝗒 𝐅𝐎𝐗 𝐁𝐀𝐋𝐀 𝐁𝐎𝐓',
+        name: '𝖧𝗈𝗅𝖺, 𝖲𝗈𝗒 𝐅𝐑𝐄𝐒𝐈𝐓𝐀 𝐁𝐎𝐓',
         jpegThumbnail: thumb
       }
     },
@@ -67,7 +67,7 @@ const handler = async (m, { conn, participants }) => {
   const content = getMessageText(m);
   if (!/^\.?n(\s|$)/i.test(content.trim())) return;
 
-  await conn.sendMessage(m.chat, { react: { text: '🗣️', key: m.key } });
+  await conn.sendMessage(m.chat, { react: { text: '🌺', key: m.key } });
 
   const seen = new Set();
   const users = [];
@@ -91,7 +91,7 @@ const handler = async (m, { conn, participants }) => {
 
   const userText = content.trim().replace(/^\.?n(\s|$)/i, '');
   const originalCaption = (q.msg?.caption || q.text || '').trim();
-  const finalCaption = userText || originalCaption || '🔊 Notificación';
+  const finalCaption = userText || originalCaption || '🌺 Notificación';
 
   try {
 
@@ -170,7 +170,7 @@ const handler = async (m, { conn, participants }) => {
 
     return await conn.sendMessage(
       m.chat,
-      { text: '🔊 Notificación', mentions: users },
+      { text: '🌺 Notificación', mentions: users },
       { quoted: fkontak }
     );
   }
